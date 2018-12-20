@@ -4,6 +4,6 @@ workflow "New workflow" {
 }
 
 action "GitHub Action for Docker" {
-  uses = "actions/docker/cli@76ff57a"
-  runs = "- rm -rf public"
+  uses = "actions/docker/cli@master"
+  runs = ["build", "-t", "aws-example", "."]
 }
